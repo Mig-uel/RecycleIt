@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+  <!-- labels/inputs: address(mandatory) location name(preferred) nameOfPerson(optional) -->
+  <form class="" action="AddLocation/addlocation.php" method="post">
+
+    <h1>Add a Location</h1>
+
+    <p>
+      <label for="lname">*Location Name:</label>
+      <input type="text" id="lname" name="lName" placeholder="Location name..." required>
+    </p>
+
+    <p>
+      <label for="address">*Address:</label><br />
+      <input type="text" id="address" name="address" placeholder="Address..." required>
+    </p>
+
+    <p>
+      <label for="pname">(Optional) Your Name:</label>
+      <input type="text" id="pname" name="pName" placeholder="Your name...">
+    </p>
+
+    <p>
+      <label for="tdate">(Optional) Today's Date:</label>
+      <input type="date" id="tdate" name="tDate" min="2021-04-25">
+    </p>
+
+    <p>
+      <label for="image">*Image:</label>
+      <input type="file" name="image" value="" id="image">
+    </p>
+
+  <!-- dropdowns amount of glass plastic and cans -->
+
+    <p>
+      <label for="plastic">*# of Plastic Machines</label>
+      <select class="" name="plastic" id="plastic" required>
+        <option value="-">-</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="cans">*# of Can Machines</label>
+      <select class="" name="cans" id="cans" required>
+        <option value="-">-</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="glass">*# of Glass Machines</label>
+      <select class="" name="glass" id="glass" required>
+        <option value="-">-</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </p>
+
+    <button type="reset" name="reset">Reset Form</button>
+    <button type="submit" name="submit">Submit</button>
+
+  </form>
+
+</body>
+
+</html>
