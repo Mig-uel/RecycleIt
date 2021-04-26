@@ -1,105 +1,119 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta charset="UTF-8">
+  <title>Add A Location</title>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
-  <!-- labels/inputs: address(mandatory) location name(preferred) nameOfPerson(optional) -->
-  <form class="" action="AddLocation/addlocation.php" method="post">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-between">
+      <a class="navbar-brand" href="#">RecycleIt</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/RecycleIt">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Community</a>
+          <a class="nav-item nav-link" href="/FindALocation">Find A Location</a>
+          <a class="nav-item nav-link active" href="/AddALocation">Add A Location</a>
+          <a class="nav-item nav-link" href="#">Issues</a>
+          <a class="nav-item nav-link" href="#">Contact</a>
+        </div>
+        <form class="form-inline ml-auto">
+          <button class="btn btn-success mr-sm-2" type="submit">Sign up</button>
+          <button class="btn btn-secondary" type="submit">Sign in</button>
+        </form>
+      </div>
+    </nav>
 
-    <h1>Add a Location</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <form class="add" action="AddLocation/addlocation.php" method="post"><br />
+          <h1 class="text-center">Add A Location</h1>
+          <!-- Location Name -->
+          <label for="lname">Location Name</label>
+          <input type="text" id="lname" name="lName" placeholder="Location name..." required /><br />
 
-    <p>
-      <label for="lname">*Location Name:</label>
-      <input type="text" id="lname" name="lName" placeholder="Location name..." required>
-    </p>
+          <!-- Address -->
+          <label for="address">Address</label><br />
+          <input type="text" id="address" name="address" placeholder="Address..." required /><br />
 
-    <p>
-      <label for="address">*Address:</label><br />
-      <input type="text" id="address" name="address" placeholder="Address..." required>
-    </p>
+          <!-- Name -->
+          <label for="pname">Your Name (Optional)</label><br />
+          <input type="text" id="pname" name="pName" placeholder="Your name..." /><br />
 
-    <p>
-      <label for="pname">(Optional) Your Name:</label>
-      <input type="text" id="pname" name="pName" placeholder="Your name...">
-    </p>
+          <!-- Date -->
+          <label for="tdate">Today's Date</label><br />
+          <input type="date" id="tdate" name="tDate" min="2021-04-25" required /><br />
 
-    <p>
-      <label for="tdate">(Optional) Today's Date:</label>
-      <input type="date" id="tdate" name="tDate" min="2021-04-25">
-    </p>
+          <!-- Image -->
+          <label for="image">Image (Optional)</label><br />
+          <input type="file" name="image" value="" id="image"><br /><br />
 
-    <p>
-      <label for="image">*Image:</label>
-      <input type="file" name="image" value="" id="image">
-    </p>
+          <!-- dropdowns amount of glass plastic and cans -->
+            <label for="plastic">Number of Plastic Machines </label>
+            <select class="" name="plastic" id="plastic" required>
+              <option value="-" disabled>-</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
 
-  <!-- dropdowns amount of glass plastic and cans -->
+            <label for="cans">Number of Can Machines </label>
+            <select class="" name="cans" id="cans" required>
+              <option value="-" disabled>-</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
 
-    <p>
-      <label for="plastic">*# of Plastic Machines</label>
-      <select class="" name="plastic" id="plastic" required>
-        <option value="-">-</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </p>
+            <label for="glass">Number of Glass Machines </label>
+            <select class="" name="glass" id="glass" required>
+              <option value="-" disabled>-</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
 
-    <p>
-      <label for="cans">*# of Can Machines</label>
-      <select class="" name="cans" id="cans" required>
-        <option value="-">-</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </p>
-
-    <p>
-      <label for="glass">*# of Glass Machines</label>
-      <select class="" name="glass" id="glass" required>
-        <option value="-">-</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </p>
-
-    <button type="reset" name="reset">Reset Form</button>
-    <button type="submit" name="submit">Submit</button>
-
-  </form>
-
+          <button type="reset" name="reset" class="btn btn-danger">Reset Form</button>
+          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
-
 </html>

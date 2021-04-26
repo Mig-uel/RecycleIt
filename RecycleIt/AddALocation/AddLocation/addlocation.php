@@ -5,14 +5,24 @@ ini_set('max_execution_time', 3000);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Register";
+$dbName = "recycleit";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbName);
 
 if ($conn->connect_error) {
   die("Connection failed: ". $conn->connect_error);
 }
 // echo "Connected successfully";
+//
+// if (!mysqli_select_db($conn, $dbName)){
+//     $sql = "CREATE DATABASE ".$dbName;
+//     if ($conn->query($sql) === TRUE) {
+//         echo "Database created successfully";
+//     }else {
+//         echo "Error creating database: " . $conn->error;
+//     }
+// }
+
 
 $address = $_POST['address'];
 $location = $_POST['lName'];
@@ -22,7 +32,7 @@ $plastic = $_POST['plastic'];
 $cans = $_POST['cans'];
 $glass = $_POST['glass'];
 
-$sql = "INSERT INTO Info (address, lName, nPerson, tDate, plastic, cans, glass) VALUES ('$address', '$location', '$name', '$date', '$plastic', '$cans', '$glass')";
+$sql = "INSERT INTO locations (address, centerName, name, date, plastic, cans, glass) VALUES ('$address', '$location', '$name', '$date', '$plastic', '$cans', '$glass')";
 
 if ($conn->query($sql) === TRUE) {
   echo "";
@@ -74,7 +84,7 @@ $conn->close();
       <div class="col-md-12">
         <h1>Thank you!</h1>
         <p>Thank you for submitting a location.</p>
-        <a href="/RecycleIt"><button type="button" class="btn btn-outline-primary">Return Home</button></a>
+        <a href="/RecycleIt"><button type="button" class="btn btn-primary">Return Home</button></a>
       </div>
     </div>
   </div>

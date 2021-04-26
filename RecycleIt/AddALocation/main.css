@@ -1,25 +1,9 @@
-*{
-  margin: 25;
-  padding: 25;
-  font-family: sans-serif;
-}
-
-h1 {
+.add {
+  margin: 0 auto;
+  width: 300px;
   color: white;
-}
-
-form {
-margin: 0 auto;
-width:250px;
-}
-
-p {
-  color: white;
-}
-
-img {
-  height: 100%;
-
+  position: relative;
+  top: 100px;
 }
 
 button {
@@ -27,10 +11,13 @@ button {
   color: white;
 }
 
-body{
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://i.pinimg.com/originals/48/c8/ce/48c8ce09f988e731a3efe46426e5d9d4.png");
-	background-size: cover;
-	background-position: center;
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/48/c8/ce/48c8ce09f988e731a3efe46426e5d9d4.png");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+label {
+  padding-top: 15px;
 }
