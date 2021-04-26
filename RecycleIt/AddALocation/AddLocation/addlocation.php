@@ -74,7 +74,7 @@ $conn->close();
       <div class="col-md-12">
         <h1>Thank you!</h1>
         <p>Thank you for submitting a location.</p>
-        <a href="RecycleIt"><button type="button" class="btn btn-outline-primary">Return Home</button></a>
+        <a href="/RecycleIt"><button type="button" class="btn btn-outline-primary">Return Home</button></a>
       </div>
     </div>
   </div>
